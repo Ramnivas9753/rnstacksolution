@@ -108,7 +108,7 @@
         <nav
             class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient-color custom-navbar sticky-navbar">
             <div class="container">
-                <a href="index.html"
+                <a href="{{ route('front.index') }}"
                     class="navbar-brand d-flex align-items-center">
                     <img src="{{ url('storage/app/' . business_setting('header_logo')) }}" alt="RnStack Solution"
                         class="rounded" style="width: 180px; height: 60px;"  data-aos="fade-right"
