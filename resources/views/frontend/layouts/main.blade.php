@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-    <title>@yield('meta_title') |  RnStack Solution</title>
+    <title>@yield('meta_title') | RnStack Solution</title>
     <link rel="icon" href="{{ url('storage/app/' . business_setting('header_logo')) }}" type="image/gif" sizes="16x16">
 
     <meta charset="utf-8">
@@ -32,7 +32,6 @@
             href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
 </head>
-
 
 <body>
 
