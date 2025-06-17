@@ -84,7 +84,7 @@
        
 
         <!-- Marquee with Pause on Hover -->
-        <div
+        {{-- <div
             class="px-3 py-2 text-white bg-gradient-color border-bottom">
             <marquee
                 behavior="scroll"
@@ -101,7 +101,7 @@
                 साथ। 📞 आज ही संपर्क करें | 💼 Let's build your digital future
                 together!
             </marquee>
-        </div>
+        </div> --}}
 
         <!-- Navbar -->
         <nav
