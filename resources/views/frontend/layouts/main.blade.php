@@ -3,7 +3,7 @@
 
 <head>
     <title>@yield('meta_title') | RnStack Solution</title>
-    <link rel="icon" href="{{ url('storage/app/' . business_setting('header_logo')) }}" type="image/gif" sizes="16x16">
+    <link rel="icon" href="{{ url('storage/app/' . business_setting('fav_icon')) }}" type="image/gif" sizes="16x16">
 
     <meta charset="utf-8">
     <meta name="robots" content="index, follow">
