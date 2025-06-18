@@ -102,6 +102,60 @@
                 together!
             </marquee>
         </div>
+        <div
+            class="px-3 py-2 text-white bg-gradient-color border-bottom">
+            <marquee
+                behavior="scroll"
+                direction="left"
+                scrollamount="6"
+                onmouseover="this.stop();"
+                onmouseout="this.start();">
+                📢 लेटेस्ट अपडेट: अब हमारी IT सेवाएं भारतभर में उपलब्ध हैं! 🖥️
+                | 🌐
+                <strong>RnStack Solution</strong> अब आपके लिए लेकर आया है
+                Website & App Development, 📱 | 🚀
+                Digital Marketing, SEO, Branding और Complete Tech Solutions 🎯
+                अपने बिज़नेस को ऑनलाइन ले जाएं और बढ़ाएं ग्रोथ — हमारी टीम के
+                साथ। 📞 आज ही संपर्क करें | 💼 Let's build your digital future
+                together!
+            </marquee>
+        </div>
+        <div
+            class="px-3 py-2 text-white bg-gradient-color border-bottom">
+            <marquee
+                behavior="scroll"
+                direction="left"
+                scrollamount="6"
+                onmouseover="this.stop();"
+                onmouseout="this.start();">
+                📢 लेटेस्ट अपडेट: अब हमारी IT सेवाएं भारतभर में उपलब्ध हैं! 🖥️
+                | 🌐
+                <strong>RnStack Solution</strong> अब आपके लिए लेकर आया है
+                Website & App Development, 📱 | 🚀
+                Digital Marketing, SEO, Branding और Complete Tech Solutions 🎯
+                अपने बिज़नेस को ऑनलाइन ले जाएं और बढ़ाएं ग्रोथ — हमारी टीम के
+                साथ। 📞 आज ही संपर्क करें | 💼 Let's build your digital future
+                together!
+            </marquee>
+        </div>
+        <div
+            class="px-3 py-2 text-white bg-gradient-color border-bottom">
+            <marquee
+                behavior="scroll"
+                direction="left"
+                scrollamount="6"
+                onmouseover="this.stop();"
+                onmouseout="this.start();">
+                📢 लेटेस्ट अपडेट: अब हमारी IT सेवाएं भारतभर में उपलब्ध हैं! 🖥️
+                | 🌐
+                <strong>RnStack Solution</strong> अब आपके लिए लेकर आया है
+                Website & App Development, 📱 | 🚀
+                Digital Marketing, SEO, Branding और Complete Tech Solutions 🎯
+                अपने बिज़नेस को ऑनलाइन ले जाएं और बढ़ाएं ग्रोथ — हमारी टीम के
+                साथ। 📞 आज ही संपर्क करें | 💼 Let's build your digital future
+                together!
+            </marquee>
+        </div>
        
 
         <!-- Navbar -->
