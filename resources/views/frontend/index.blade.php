@@ -308,10 +308,10 @@
                         <div
                             class="p-4 text-center bg-white border-0 shadow card rounded-4 h-100">
                             <img src="{{ asset('assets') }}/images/team/default.avif"
-                                alt="Sneha"
+                                alt="Laxmi"
                                 class="mx-auto mb-3 border shadow rounded-circle border-3 border-primary"
                                 style="width:110px; height:110px; object-fit:cover;">
-                            <h5 class="mb-1 fw-bold">Sneha</h5>
+                            <h5 class="mb-1 fw-bold">Laxmi</h5>
                             <p
                                 class="text-primary-color small fw-semibold">Project
                                 Manager</p>
@@ -359,10 +359,10 @@
                         <div
                             class="p-4 text-center bg-white border-0 shadow card rounded-4 h-100">
                             <img src="{{ asset('assets') }}/images/team/default.avif"
-                                alt="Sneha"
+                                alt="Laxmi"
                                 class="mx-auto mb-3 border shadow rounded-circle border-3 border-primary"
                                 style="width:110px; height:110px; object-fit:cover;">
-                            <h5 class="mb-1 fw-bold">Sneha</h5>
+                            <h5 class="mb-1 fw-bold">Laxmi</h5>
                             <p class="text-primary-color small fw-semibold">SEO
                                 Expert
                                 & Content Strategist</p>
