@@ -102,9 +102,6 @@
                 together!
             </marquee>
         </div>
-        
-       
-       
 
         <!-- Navbar -->
         <nav
