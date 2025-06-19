@@ -30,7 +30,8 @@
                             <img src="{{ url('storage/app/' . $testimonial->image) }}"
                                 alt="Ramnivas Rajput"
                                 class="mx-auto mb-3 border shadow rounded-circle border-3 border-primary"
-                                style="width:110px; height:110px; object-fit:cover;">
+                                style="width:110px; height:110px; object-fit:cover;"
+                                 onerror="this.onerror=null;this.src='{{ url('storage/app/' . business_setting('header_logo')) }}';">
                             <h5 class="mb-1 fw-bold">{{ $testimonial->name }}</h5>
                             <p
                                 class="text-primary-color small fw-semibold">{{ $testimonial->designation }}</p>
