@@ -7,7 +7,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="card-header" >
-                <h4 class="card-title">@if(isset($services)) Edit @else Add @endif Accomoditions</h4>
+                <h4 class="card-title">@if(isset($services)) Edit @else Add @endif Services</h4>
                 <p><a href="{{route('admin.services')}}"  class="btn btn-dark btn-sm"><strong>-Back</strong></a></p>
             </div>
             <div class="card-body">

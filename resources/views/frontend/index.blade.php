@@ -183,65 +183,18 @@
                     Services</h2>
                 <div class="row g-4">
 
+                    @foreach($services as $service)
                     <div class="col-md-6 col-lg-4" data-aos="fade-up"
                         data-aos-duration="1500">
                         <div class="p-4 text-center border rounded h-100">
-                            <i
-                                class="mb-3 fa fa-code fa-2x text-primary-color"></i>
-                            <h5>Web Development</h5>
-                            <p>Custom websites with modern tech</p>
+                            <i class="mb-3 fa fa-code fa-2x text-primary-color"></i>
+                            {{-- {{ url('storage/app/' . $service->image) }} --}}
+                            <h5>{{ $service->title }}</h5>
+                            <p>{{ $service->subtitle }}</p>
+                            {{-- <h5>{{ $service->description }}</h5> --}}
                         </div>
                     </div>
-
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up"
-                        data-aos-duration="1500">
-                        <div class="p-4 text-center border rounded h-100">
-                            <i
-                                class="mb-3 fa fa-mobile-alt fa-2x text-primary-color"></i>
-                            <h5>App Development</h5>
-                            <p>Android/iOS hybrid apps</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up"
-                        data-aos-duration="1500">
-                        <div class="p-4 text-center border rounded h-100">
-                            <i
-                                class="mb-3 fa fa-bullhorn fa-2x text-primary-color"></i>
-                            <h5>Digital Marketing</h5>
-                            <p>SEO, social & PPC ads</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up"
-                        data-aos-duration="1500">
-                        <div class="p-4 text-center border rounded h-100">
-                            <i
-                                class="mb-3 fa fa-paint-brush fa-2x text-primary-color"></i>
-                            <h5>UI/UX Design</h5>
-                            <p>User-friendly design solutions</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up"
-                        data-aos-duration="1500">
-                        <div class="p-4 text-center border rounded h-100">
-                            <i
-                                class="mb-3 fa fa-cloud fa-2x text-primary-color"></i>
-                            <h5>Cloud Solutions</h5>
-                            <p>AWS, GCP & server setup</p>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4" data-aos="fade-up"
-                        data-aos-duration="1500">
-                        <div class="p-4 text-center border rounded h-100">
-                            <i
-                                class="mb-3 fa fa-shield-alt fa-2x text-primary-color"></i>
-                            <h5>Cyber Security</h5>
-                            <p>Secure & tested apps</p>
-                        </div>
-                    </div>
+                    @endforeach
 
                 </div>
             </div>
@@ -275,110 +228,29 @@
 
                 <div class="row g-4">
                     <!-- Member 1 -->
+                     @foreach($testimonials as $testimonial)
                     <div class="col-md-6 col-lg-4 col-xl-3" data-aos="flip-right"
                         data-aos-duration="1500">
                         <div
                             class="p-4 text-center bg-white border-0 shadow card rounded-4 h-100">
-                            <img src="{{ asset('assets') }}/images/team/ramnivas.jpeg"
+                            <img src="{{ url('storage/app/' . $testimonial->image) }}"
                                 alt="Ramnivas Rajput"
                                 class="mx-auto mb-3 border shadow rounded-circle border-3 border-primary"
                                 style="width:110px; height:110px; object-fit:cover;">
-                            <h5 class="mb-1 fw-bold">Ramnivas Rajput</h5>
+                            <h5 class="mb-1 fw-bold">{{ $testimonial->name }}</h5>
                             <p
-                                class="text-primary-color small fw-semibold">Founder
-                                &
-                                Team Leader</p>
+                                class="text-primary-color small fw-semibold">{{ $testimonial->designation }}</p>
                             <p class="fst-italic text-secondary small">
-                                “As the visionary behind RnStack Solution, I
-                                lead our team with a strong foundation in
-                                backend development, ensuring every project is
-                                scalable, secure, and impactful.”
+                               {{ $testimonial->comment }}
                             </p>
-                            <a
+                            {{-- <a
                                 href="https://www.linkedin.com/in/ramnivasrajput9753/"
                                 target="_blank" class="text-primary-color fs-5">
                                 <i class="fab fa-linkedin"></i>
-                            </a>
+                            </a> --}}
                         </div>
                     </div>
-
-                    <!-- Member 2 -->
-                    <div class="col-md-6 col-lg-4 col-xl-3" data-aos="flip-right"
-                        data-aos-duration="1500">
-                        <div
-                            class="p-4 text-center bg-white border-0 shadow card rounded-4 h-100">
-                            <img src="{{ asset('assets') }}/images/team/default.avif"
-                                alt="Laxmi"
-                                class="mx-auto mb-3 border shadow rounded-circle border-3 border-primary"
-                                style="width:110px; height:110px; object-fit:cover;">
-                            <h5 class="mb-1 fw-bold">Laxmi</h5>
-                            <p
-                                class="text-primary-color small fw-semibold">Project
-                                Manager</p>
-                            <p class="fst-italic text-secondary small">
-                                “With expertise in client communication and team
-                                coordination, I ensure smooth delivery of each
-                                project while maintaining high quality and
-                                client satisfaction.”
-                            </p>
-                            <a href="https://www.linkedin.com/" target="_blank"
-                                class="text-primary-color fs-5">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Member 3 -->
-                    <div class="col-md-6 col-lg-4 col-xl-3" data-aos="flip-right"
-                        data-aos-duration="1500">
-                        <div
-                            class="p-4 text-center bg-white border-0 shadow card rounded-4 h-100">
-                            <img src="{{ asset('assets') }}/images/team/ramnivas.jpeg"
-                                alt="Ramnivas Rajput"
-                                class="mx-auto mb-3 border shadow rounded-circle border-3 border-primary"
-                                style="width:110px; height:110px; object-fit:cover;">
-                            <h5 class="mb-1 fw-bold">Ramnivas Rajput</h5>
-                            <p
-                                class="text-primary-color small fw-semibold">Senior
-                                Frontend Developer</p>
-                            <p class="fst-italic text-secondary small">
-                                “I specialize in creating responsive, intuitive,
-                                and pixel-perfect interfaces using React,
-                                Tailwind, and modern frontend frameworks.”
-                            </p>
-                            <a href="https://www.linkedin.com/" target="_blank"
-                                class="text-primary-color fs-5">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Member 4 -->
-                    <div class="col-md-6 col-lg-4 col-xl-3" data-aos="flip-right"
-                        data-aos-duration="1500">
-                        <div
-                            class="p-4 text-center bg-white border-0 shadow card rounded-4 h-100">
-                            <img src="{{ asset('assets') }}/images/team/default.avif"
-                                alt="Laxmi"
-                                class="mx-auto mb-3 border shadow rounded-circle border-3 border-primary"
-                                style="width:110px; height:110px; object-fit:cover;">
-                            <h5 class="mb-1 fw-bold">Laxmi</h5>
-                            <p class="text-primary-color small fw-semibold">SEO
-                                Expert
-                                & Content Strategist</p>
-                            <p class="fst-italic text-secondary small">
-                                “With a deep understanding of SEO algorithms and
-                                keyword research, I help brands gain visibility
-                                and rank higher with content that connects and
-                                converts.”
-                            </p>
-                            <a href="https://www.linkedin.com/" target="_blank"
-                                class="text-primary-color fs-5">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
         </section>

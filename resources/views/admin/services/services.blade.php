@@ -3,13 +3,13 @@
 
 @section('body')
 
-<div class="container-fluid px-md-5 px-3">
+<div class="px-3 container-fluid px-md-5">
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-header" >
-                <h4 class="card-title">Accomoditions List</h4>
-                <p><a href="{{route('admin.services_create')}}" class="btn btn-success btn-sm">Add Accomodition</a></p>
+                <h4 class="card-title">Services List</h4>
+                <p><a href="{{route('admin.services_create')}}" class="btn btn-success btn-sm">Add Services</a></p>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

@@ -41,14 +41,23 @@
             </li>
             @endif
 
-            @if(checkAccess('22'))
+            {{-- @if(checkAccess('22')) --}}
             <li>
                 <a href="{{ route('admin.services') }}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-network"></i>
-                    <span class="nav-text">Accomoditions</span>
+                    <span class="nav-text">Our Services</span>
                 </a>
             </li>
-            @endif
+            {{-- @endif --}}
+            
+            {{-- @if(checkAccess('22')) --}}
+            <li>
+                <a href="{{ route('admin.testimonial') }}" class="ai-icon" aria-expanded="false">
+                    <i class="flaticon-381-network"></i>
+                    <span class="nav-text">Our Team</span>
+                </a>
+            </li>
+            {{-- @endif --}}
             
             <li>
                 <a href="{{ route('admin.blog') }}" class="ai-icon" aria-expanded="false">
@@ -60,7 +69,7 @@
             <li>
                 <a href="{{ route('admin.product') }}" class="ai-icon" aria-expanded="false">
                     <i class="flaticon-381-internet"></i>
-                    <span class="nav-text">Products</span>
+                    <span class="nav-text">Careers</span>
                 </a>
             </li>
             

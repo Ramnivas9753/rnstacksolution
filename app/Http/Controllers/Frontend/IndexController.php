@@ -23,8 +23,8 @@ class IndexController extends Controller
     public function index($bcat_id = "")
     {
         $slider = Slider::where('status', 1)->get();
-        $service = Services::where('status', 1)->latest()->limit(3)->get();
-        $testimonial = Testimonial::where('status', 1)->latest()->get();
+        $service = Services::where('status', 1)->get();
+        $testimonial = Testimonial::where('status', 1)->get();
         $gallery = Gallery::where(['status' => 1])->latest()->limit(6)->get();
         // $blog = Blog::where(['status' => 1])->latest(5);
 
@@ -34,7 +34,7 @@ class IndexController extends Controller
             $blog = Blog::where(['status' => 1, 'category_id' => $bcat_id])->latest(4)->paginate(6);
         }
         $resent_blog = Blog::where(['status' => 1])->latest()->limit(4)->get();
-       
+
         if ($bcat_id == null) {
             $product = Product::where(['status' => 1])->latest()->paginate(4);
         } else {
@@ -55,32 +55,18 @@ class IndexController extends Controller
     }
 
 
-    // Term-Coditions
-    // public function shop()
-    // {
-    //     return view('frontend.pages.shop');
-    // }
-    // public function shopDetails()
-    // {
-    //     return view('frontend.pages.shopDetails');
-    // }
 
-    public function shop() 
+    public function shop()
     {
         // Fetch all shops with status = 1, ordered by the latest
         $shops = Shop::where('status', 1)->latest()->paginate(6); // Assuming your model is Shop
         return view('frontend.pages.shop', ['shops' => $shops]);
     }
-    
 
 
-//     public function shopDetails($slug)
-// {
-//     return view('frontend.pages.shopDetails', compact('slug'));
-// }
 
 
-    
+
 
     // In IndexController
 
@@ -117,7 +103,7 @@ class IndexController extends Controller
         $gallery = Gallery::where(['status' => 1])->latest()->limit(6)->get();
         return view('frontend.pages.contact', ['faqs' => $faq, 'gallerys' => $gallery]);
     }
-    
+
     public function productEnquiry()
     {
         $faq = Faq::where(['status' => 1])->get();
@@ -155,6 +141,14 @@ class IndexController extends Controller
         return view('frontend.pages.booking');
     }
 
+
+    //Testimonials
+    public function testimonial()
+    {
+        $testimonial = Testimonial::where(['status' => 1])->get();
+
+        return view('frontend.services.testimonial', ['testimonials' => $testimonial]);
+    }
 
     //Services
     public function services()
@@ -203,52 +197,52 @@ class IndexController extends Controller
 
     // ====================
 
-        // Blogs
-        public function product($bcat_id = "")
-        {
-            if ($bcat_id == null) {
-                $product = Product::where(['status' => 1])->latest()->get();
-                // $blog = Blog::where(['status' => 1])->latest()->paginate(6);
-            } else {
-                $product = Product::where(['status' => 1, 'category_id' => $bcat_id])->latest()->get();
-                // $blog = Blog::where(['status' => 1, 'category_id' => $bcat_id])->latest()->paginate(6);
-            }
-            return view('frontend.services.product', ['products' => $product]);
+    // Blogs
+    public function product($bcat_id = "")
+    {
+        if ($bcat_id == null) {
+            $product = Product::where(['status' => 1])->latest()->get();
+            // $blog = Blog::where(['status' => 1])->latest()->paginate(6);
+        } else {
+            $product = Product::where(['status' => 1, 'category_id' => $bcat_id])->latest()->get();
+            // $blog = Blog::where(['status' => 1, 'category_id' => $bcat_id])->latest()->paginate(6);
         }
-    
-        // public function productDetails($slug)
-        // {
-        //     $gallery = Gallery::where(['status' => 1])->latest()->limit(6)->get();
-        //     $product_details = Product::where(['status' => 1, 'slug' => $slug])->first();
-        //     if (!isset($blog_details)) {
-        //         return redirect()->route('front.index')->with('error', 'Product Not Found');
-        //     }
-        //     $product_category = productCategory::where(['status' => 1])->get();
-        //     $resent_product = Product::where(['status' => 1])->latest()->limit(4)->get();
-    
-        //     return view('frontend.services.product_details', ['product_details' => $product_details, 'product_category' => $product_category, 'gallerys' => $gallery, 'resent_product' => $resent_product]);
-        // }
-
-        public function productDetails($slug)
-{
-    $gallery = Gallery::where(['status' => 1])->latest()->limit(6)->get();
-    $product_details = Product::where(['status' => 1, 'slug' => $slug])->first();
-
-    // Agar product nahi mila to home page par redirect karna
-    if (!$product_details) {
-        return redirect()->route('front.index')->with('error', 'Product Not Found');
+        return view('frontend.services.product', ['products' => $product]);
     }
 
-    $product_category = productCategory::where(['status' => 1])->get();
-    $resent_product = Product::where(['status' => 1])->latest()->limit(4)->get();
+    // public function productDetails($slug)
+    // {
+    //     $gallery = Gallery::where(['status' => 1])->latest()->limit(6)->get();
+    //     $product_details = Product::where(['status' => 1, 'slug' => $slug])->first();
+    //     if (!isset($blog_details)) {
+    //         return redirect()->route('front.index')->with('error', 'Product Not Found');
+    //     }
+    //     $product_category = productCategory::where(['status' => 1])->get();
+    //     $resent_product = Product::where(['status' => 1])->latest()->limit(4)->get();
 
-    return view('frontend.services.product_details', [
-        'product_details' => $product_details,
-        'product_category' => $product_category,
-        'gallerys' => $gallery,
-        'resent_product' => $resent_product
-    ]);
-}
+    //     return view('frontend.services.product_details', ['product_details' => $product_details, 'product_category' => $product_category, 'gallerys' => $gallery, 'resent_product' => $resent_product]);
+    // }
+
+    public function productDetails($slug)
+    {
+        $gallery = Gallery::where(['status' => 1])->latest()->limit(6)->get();
+        $product_details = Product::where(['status' => 1, 'slug' => $slug])->first();
+
+        // Agar product nahi mila to home page par redirect karna
+        if (!$product_details) {
+            return redirect()->route('front.index')->with('error', 'Product Not Found');
+        }
+
+        $product_category = productCategory::where(['status' => 1])->get();
+        $resent_product = Product::where(['status' => 1])->latest()->limit(4)->get();
+
+        return view('frontend.services.product_details', [
+            'product_details' => $product_details,
+            'product_category' => $product_category,
+            'gallerys' => $gallery,
+            'resent_product' => $resent_product
+        ]);
+    }
 
     // ====================
 

@@ -141,11 +141,19 @@ Route::group(['middleware' => ['auth:admin','checkStatus'], 'prefix' => 'admin',
   Route::get('faq-edit/{id}', [FaqController::class, 'editFaq'])->name('faq_edit');
   Route::get('faq-data', [FaqController::class, 'dataFaq'])->name('faq_data');
   // Testimonial
+  // Route::get('testimonial', [FaqController::class, 'testimonial'])->name('testimonial');
+  // Route::post('testimonial-create', [FaqController::class, 'createTestimonial'])->name('testimonial_create');
+  // Route::get('testimonial-create', [FaqController::class, 'addTestimonial'])->name('testimonial_create');
+  // Route::get('testimonial-edit/{id}', [FaqController::class, 'editTestimonial'])->name('testimonial_edit');
+  // Route::get('testimonial-data', [FaqController::class, 'dataTestimonial'])->name('testimonial_data');
+
+  // Testimonial
   Route::get('testimonial', [FaqController::class, 'testimonial'])->name('testimonial');
   Route::post('testimonial-create', [FaqController::class, 'createTestimonial'])->name('testimonial_create');
   Route::get('testimonial-create', [FaqController::class, 'addTestimonial'])->name('testimonial_create');
   Route::get('testimonial-edit/{id}', [FaqController::class, 'editTestimonial'])->name('testimonial_edit');
   Route::get('testimonial-data', [FaqController::class, 'dataTestimonial'])->name('testimonial_data');
+  
 
   // Contacts
   Route::get('contact-us', [DashboardController::class, 'contact'])->name('contact');
@@ -190,6 +198,7 @@ Route::get('privacy-policy', [IndexController::class, 'privacyPolicy'])->name('f
 
 //Services
 Route::get('services', [IndexController::class, 'services'])->name('front.services');
+Route::get('testimonial', [IndexController::class, 'testimonial'])->name('front.testimonial');
 
 // Blogs
 Route::get('blog', [IndexController::class, 'blog'])->name('front.blog');
