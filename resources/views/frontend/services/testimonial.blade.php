@@ -28,7 +28,7 @@
                         <div
                             class="p-4 text-center bg-white border-0 shadow card rounded-4 h-100">
                             <img src="{{ url('storage/app/' . $testimonial->image) }}"
-                                alt="Ramnivas Rajput"
+                                alt="{{ $testimonial->name }}"
                                 class="mx-auto mb-3 border shadow rounded-circle border-3 border-primary"
                                 style="width:110px; height:110px; object-fit:cover;"
                                  onerror="this.onerror=null;this.src='{{ asset('assets') }}/images/defaultimg.webp';">
