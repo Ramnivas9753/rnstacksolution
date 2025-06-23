@@ -250,6 +250,9 @@
                             <li><a href={{ route('front.contact') }}
                                     class="mb-2 text-white text-decoration-none d-block">»
                                     Contact</a></li>
+                                    <li><a href="/careers.html"
+                                    class="mb-2 text-white text-decoration-none d-block">»
+                                    Careers</a></li>
                         </ul>
                     </div>
 
@@ -257,9 +260,7 @@
                     <div class="mb-4 col-md-2">
                         <h6 class="mb-3 fw-bold">QUICK ACCESS</h6>
                         <ul class="list-unstyled small">
-                            <li><a href="/careers.html"
-                                    class="mb-2 text-white text-decoration-none d-block">»
-                                    Careers</a></li>
+                            
                             {{-- <li><a href="/faqs.html"
                                     class="mb-2 text-white text-decoration-none d-block" data-aos="fade-up"
                         data-aos-duration="1500">»
