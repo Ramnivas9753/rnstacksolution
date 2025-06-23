@@ -31,6 +31,25 @@
         <link rel="stylesheet"
             href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
+            <style>
+                .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    border-radius: 50%;
+    padding: 8px;
+    transition: all 0.3s ease-in-out;
+    /* background-color: #25D366; */
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+            </style>
+
 </head>
 
 <body>
@@ -177,6 +196,7 @@
         <!-- ✅ Footer -->
         <footer class="pt-5 pb-3 text-white"
             style="background: linear-gradient(120deg, #1e3c72, #2a5298); font-family: 'Segoe UI', sans-serif;">
+            <!-- style="background: linear-gradient(120deg, #1e3c72, #2a5298); font-family: 'Segoe UI', sans-serif;"> -->
             <div class="container">
                 <div class="row">
                     <!-- Logo & Description -->
@@ -247,23 +267,42 @@
                             <li><a href={{ route('front.blog') }}
                                     class="mb-2 text-white text-decoration-none d-block">»
                                     Blog</a></li>
+                            <li><a href={{ route('front.privacyPolicy') }}
+                                    class="mb-2 text-white text-decoration-none d-block">»
+                                    Privacy Policy</a></li>
+                            <li><a href={{ route('front.termCondition') }}
+                                    class="mb-2 text-white text-decoration-none d-block">»
+                                    Terms And Conditions</a></li>
                         </ul>
                     </div>
 
-                    <!-- Newsletter -->
-                    <div class="mb-4 col-md-4">
-                        <h6 class="mb-3 fw-bold">NEWSLETTER</h6>
-                        <p class="small">Subscribe for latest news and special
-                            offers!</p>
-                        <div class="mt-3 shadow-sm input-group">
-                            <input type="email"
-                                class="p-2 form-control rounded-start"
-                                placeholder="Enter your email"
-                                style="background-color: #f8f9fa; border: none; font-size: 14px;">
-                            <button
-                                class="btn text-light fw-semibold rounded-end btn-gradient">Subscribe</button>
-                        </div>
-                    </div>
+                   <!-- Right Column: Newsletter + Contact Info -->
+<div class="mb-4 col-md-4">
+    <div class="mb-4">
+        <h6 class="mb-3 text-white fw-bold">QUICK CONTACT</h6>
+        <p class="mb-1 text-light small">
+            📞 <a href="tel:+919752902223" class="text-light text-decoration-none">+91 97529 02223</a>
+        </p>
+        <p class="mb-0 text-light small">
+            📧 <a href="mailto:support@rnstacksolution.com" class="text-light text-decoration-none">support@rnstacksolution.com</a>
+        </p>
+    </div>
+    <div class="my-2">
+        <h6 class="mb-2 text-white fw-bold">NEWSLETTER</h6>
+        <p class="small text-light">Subscribe for latest news and special offers!</p>
+        <div class="mt-3 shadow-sm input-group">
+            <input type="email"
+                class="p-2 form-control rounded-start"
+                placeholder="Enter your email"
+                style="background-color: #f8f9fa; border: none; font-size: 14px;">
+            <button
+                class="btn text-light fw-semibold rounded-end btn-gradient">Subscribe</button>
+        </div>
+    </div>
+
+    
+</div>
+
                 </div>
 
                 <hr class="mt-4 border-light">
@@ -273,6 +312,13 @@
             </div>
         </footer>
         <!-- footer end -->
+
+        <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/{{business_setting('phone_no1')}}" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+    <img src="{{ asset('assets') }}/images/chat.png" alt="WhatsApp" width="50" height="50">
+</a>
+
+
 
 
      <!-- Swiper JS -->

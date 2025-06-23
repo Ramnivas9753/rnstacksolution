@@ -5,103 +5,104 @@
 @section('meta_description', seo_helper(6)->meta_desc)
 @section('content')
 
+    <!-- Custom Styles -->
+    <style>
+        .privacy-wrapper {
+            max-width: 900px;
+            margin: 60px auto;
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            animation: fadeInUp 0.7s ease-out;
+        }
 
-    <section id="subheader" class="relative jarallax text-light">
-        <img loading="lazy" src="{{ asset('assets') }}/images/defaultimg.webp" class="jarallax-img" alt="{{ business_setting('site_name') }}" onerror="this.onerror=null;this.src='{{ asset('assets') }}/images/defaultimg.webp';">
-        <div class="container relative z-index-1000">
-            <div class="row">
-                <div class="col-lg-6">
-                    <ul class="crumb">
-                        <li><a href="\">Home</a></li>
-                        <li class="active">Privacy Policy</li>
-                    </ul>
-                    <h1 class="text-uppercase">Privacy Policy</h1>
-                    <p class="col-lg-10 lead">Transform Your Garden into a Personal Paradise!</p>
-                </div>
-            </div>
-        </div>
-        <img loading="lazy" src="{{ url('storage/app/' . business_setting('header_logo')) }}" class="bottom-0 w-20 bg-light abs end-0 z-2" alt="{{ business_setting('site_name') }}" onerror="this.onerror=null;this.src='{{ asset('assets') }}/images/defaultimg.webp';">
-        <div class="de-gradient-edge-top dark"></div>
-        <div class="de-overlay"></div>
-    </section>
+        .privacy-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0d6efd;
+            margin-bottom: 20px;
+        }
 
-{{-- Section --}}
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
-        margin-top: 20px;
-    }
-    h1, h2 {
-        color: #333;
-        margin-bottom: 20px;
-    }
-    h3 {
-        color: #555;
-        margin-top: 30px;
-    }
-    p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: #666;
-    }
-    .section-title {
-        margin-bottom: 10px;
-        font-size: 30px !important;
-    }
+        .section-title {
+            font-size: 1.25rem;
+            color: #212529;
+            font-weight: 600;
+            margin-top: 30px;
+        }
 
-</style>
+        .privacy-wrapper p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
 
-<section class="mb-5">
-    <div class="container relative z-1">
-        <div class="row g-4 gx-5 align-items-center">
-            <div class="px-2 col-lg-12 px-md-5">
-                <div class="mb-3 subtitle wow fadeInUp">{{business_setting('site_name')}}</div>
-                {{-- <h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Privacy Policy</h2> --}}
-                {{-- <p class="wow fadeInUp">{!! business_setting('privacy') !!}</p> --}}
+        .last-updated {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
 
-                <p><strong>परिचय (Introduction)</strong></p>
-        <p>आपका स्वागत है <strong>RnStack Solution</strong> पर। आपकी गोपनीयता हमारे लिए बेहद महत्वपूर्ण है। इस गोपनीयता नीति में हम यह बताएंगे कि हम आपकी व्यक्तिगत जानकारी को कैसे इकट्ठा, उपयोग और सुरक्षित रखते हैं। कृपया इस पेज को ध्यान से पढ़ें, ताकि आप हमारी गोपनीयता प्रथाओं को समझ सकें।</p>
+        .contact-box {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #f1f5ff;
+            border-left: 5px solid #0d6efd;
+            border-radius: 10px;
+        }
 
-        <h2 class="section-title">हम कौनसी जानकारी इकट्ठा करते हैं (Information We Collect)</h2>
-        <p>हम अपनी वेबसाइट पर निम्नलिखित प्रकार की जानकारी एकत्र करते हैं:</p>
-        <ul>
-            <li>व्यक्तिगत जानकारी: जैसे आपका नाम, ईमेल पता, शिपिंग और बिलिंग पते, फोन नंबर, आदि।</li>
-            <li>ऑर्डर संबंधित जानकारी: यदि आप हमारे उत्पाद खरीदते हैं, तो हम ऑर्डर, भुगतान, और शिपिंग से संबंधित जानकारी एकत्र करते हैं।</li>
-            <li>सामान्य जानकारी: जैसे IP एड्रेस, ब्राउज़र जानकारी, और आपके द्वारा हमारी वेबसाइट पर की गई गतिविधियाँ।</li>
-        </ul>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-        <h2 class="section-title">हम आपकी जानकारी का उपयोग कैसे करते हैं (How We Use Your Information)</h2>
-        <p>हम आपकी जानकारी का उपयोग निम्नलिखित उद्देश्यों के लिए करते हैं:</p>
-        <ul>
-            <li>आपके ऑर्डर को पूरा करना और उत्पादों की शिपिंग करना।</li>
-            <li>ग्राहक सेवा प्रदान करना और आपके सवालों का उत्तर देना।</li>
-            <li>हमारी सेवाओं और उत्पादों में सुधार करना।</li>
-            <li>ट्रैकिंग और विश्लेषण करना ताकि हम आपकी वेबसाइट अनुभव को बेहतर बना सकें।</li>
-        </ul>
+        .highlight {
+            color: #0d6efd;
+            font-weight: 500;
+        }
+    </style>
+<div class="container">
+    <div class="privacy-wrapper">
+        <h1 class="privacy-title">Privacy Policy</h1>
+        <p class="last-updated">Last Updated: 23 June 2025</p>
 
-        <h2 class="section-title">कुकीज़ (Cookies)</h2>
-        <p>हमारी वेबसाइट कुकीज़ का उपयोग करती है, जो आपकी पसंदीदा सेटिंग्स और वेबसाइट पर नेविगेशन को याद रखने में मदद करती हैं। आप अपनी ब्राउज़र सेटिंग्स में कुकीज़ को नियंत्रित या हटा सकते हैं, लेकिन यह वेबसाइट के कुछ कार्यों को प्रभावित कर सकता है।</p>
+        <p>At <span class="highlight">RnStack Solution</span>, we respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website or use our services.</p>
 
-        <h2 class="section-title">थर्ड-पार्टी लिंक (Third-Party Links)</h2>
-        <p>हमारी वेबसाइट पर कुछ थर्ड-पार्टी वेबसाइटों के लिंक हो सकते हैं। हम इन वेबसाइटों की गोपनीयता नीतियों के लिए जिम्मेदार नहीं हैं और आपको इन साइटों पर जाने से पहले उनकी नीतियों को पढ़ने की सलाह दी जाती है।</p>
+        <h5 class="section-title">1. What Information We Collect</h5>
+        <p>We may collect your name, email, phone number, and technical data such as IP address, browser type, and pages visited.</p>
 
-        <h2 class="section-title">डेटा सुरक्षा (Data Security)</h2>
-        <p>हम आपकी जानकारी की सुरक्षा के लिए उपयुक्त तकनीकी और भौतिक उपायों का पालन करते हैं। हालांकि, कृपया ध्यान दें कि इंटरनेट पर कोई भी डेटा ट्रांसमिशन पूरी तरह से सुरक्षित नहीं हो सकता।</p>
+        <h5 class="section-title">2. How We Use Your Information</h5>
+        <p>Your data helps us communicate with you, improve our services, and provide a better user experience. We <strong>do not sell</strong> your data to third parties.</p>
 
-        <h2 class="section-title">गोपनीयता नीति में बदलाव (Changes to This Privacy Policy)</h2>
-        <p>हम अपनी गोपनीयता नीति को समय-समय पर अपडेट कर सकते हैं। कोई भी बदलाव इस पेज पर प्रकाशित किया जाएगा। कृपया नियमित रूप से इस पेज को चेक करें।</p>
+        <h5 class="section-title">3. Your Rights</h5>
+        <p>You can request access to your data, update it, or ask us to delete it. You can also unsubscribe from emails at any time.</p>
 
-        <h2 class="section-title">संपर्क करें (Contact Us)</h2>
-        <p>यदि आपके पास हमारी गोपनीयता नीति से संबंधित कोई प्रश्न हैं, तो कृपया हमें <a href="mailto:info@RnStack Solution.in">info@RnStack Solution.in</a> पर संपर्क करें।</p>
+        <h5 class="section-title">4. Data Protection</h5>
+        <p>We use secure methods to protect your information, but no system is 100% secure. We continuously work to enhance our security.</p>
 
-            </div>
+        <h5 class="section-title">5. Third-Party Websites</h5>
+        <p>Our site may link to external websites. We are not responsible for their privacy practices. Please read their policies separately.</p>
 
+        <h5 class="section-title">6. Changes to This Policy</h5>
+        <p>We may update this Privacy Policy from time to time. Please review it regularly for any changes.</p>
+
+        <div class="contact-box">
+            <h5>Contact Us</h5>
+            <p>If you have any questions regarding this policy, feel free to contact us:</p>
+            <ul class="list-unstyled">
+                <li><strong>Email:</strong> support@rnstacksolution.com</li>
+                <li><strong>Phone:</strong> +91 9752902223</li>
+                <li><strong>Website:</strong> https://rnstacksolution.villageterracegarden.com</li>
+            </ul>
         </div>
     </div>
+</div>
 
-</section>
-{{-- Section --}}
 
 
 @endsection

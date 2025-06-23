@@ -2,7 +2,7 @@
 @section('page_title', 'Business Setting')
 
 @section('body')
-<div class="container-fluid px-md-5 px-3">
+<div class="px-3 container-fluid px-md-5">
 <div class="row">
     <div class="card">
         <div class="card-header d-block">
@@ -68,21 +68,21 @@
                                                 <input type="text" name="phone_no1" id="phone_no1" value="{{ $settings->phone_no1 }}" class="form-control" placeholder="Enter a phone no1.." required>
                                                 <div class="invalid-feedback">Please enter a phone no1.</div>
                                             </div>
-                                            {{-- <div class="col-xl-12">
+                                            <div class="col-xl-12">
                                                 <label class="col-form-label" for="phone_no2">Phone No2<span class="text-danger">*</span></label>
                                                 <input type="text" name="phone_no2" id="phone_no2" value="{{ $settings->phone_no2 }}" class="form-control" placeholder="Enter a phone no2.." required>
                                                 <div class="invalid-feedback">Please enter a phone no2.</div>
-                                            </div> --}}
+                                            </div>
                                             <div class="col-xl-12">
                                                 <label class="col-form-label" for="address">Address<span class="text-danger">*</span></label>
                                                 <textarea class="form-control" name="address" id="" rows="5" placeholder="What would you like to see?" required>{{ $settings->address }}</textarea>
                                                 <div class="invalid-feedback">Please enter a address.</div>
                                             </div>
-                                            {{-- <div class="col-xl-12">
+                                            <div class="col-xl-12">
                                                 <label class="col-form-label" for="footer_description">Footer Description<span class="text-danger">*</span></label>
                                                 <textarea class="form-control" name="footer_description" id="" rows="5" placeholder="What would you like to see?" required>{{ $settings->footer_description }}</textarea>
                                                 <div class="invalid-feedback">Please enter a footer description.</div>
-                                            </div> --}}
+                                            </div>
                                             <div class="col-xl-12">
                                                 <label class="col-form-label" for="copyright">Copyright<span class="text-danger">*</span></label>
                                                 <textarea class="form-control" name="copyright" id="" rows="5" placeholder="What would you like to see?" required>{{ $settings->copyright }}</textarea>

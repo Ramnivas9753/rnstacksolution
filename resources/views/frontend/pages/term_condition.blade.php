@@ -5,102 +5,109 @@
 @section('meta_description', seo_helper(7)->meta_desc)
 @section('content')
 
-
-    <section id="subheader" class="relative jarallax text-light">
-        <img loading="lazy" src="{{ asset('assets') }}/images/defaultimg.webp" class="jarallax-img" alt="{{ business_setting('site_name') }}" onerror="this.onerror=null;this.src='{{ asset('assets') }}/images/defaultimg.webp';">
-        <div class="container relative z-index-1000">
-            <div class="row">
-                <div class="col-lg-6">
-                    <ul class="crumb">
-                        <li><a href="\">Home</a></li>
-                        <li class="active">Terms & Condition</li>
-                    </ul>
-                    <h1 class="text-uppercase">Terms & Condition</h1>
-                    <p class="col-lg-10 lead">Transform Your Garden into a Personal Paradise!</p>
-                </div>
-            </div>
-        </div>
-        <img loading="lazy" src="{{ url('storage/app/' . business_setting('header_logo')) }}" class="bottom-0 w-20 bg-light abs end-0 z-2" alt="{{ business_setting('site_name') }}" onerror="this.onerror=null;this.src='{{ asset('assets') }}/images/defaultimg.webp';">
-        <div class="de-gradient-edge-top dark"></div>
-        <div class="de-overlay"></div>
-    </section>
-
+  <!-- Custom CSS -->
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            margin-top: 20px;
+            background: linear-gradient(120deg, #f9f9ff, #eef3ff);
+            font-family: 'Segoe UI', sans-serif;
         }
-        h1, h2 {
-            color: #333;
+
+        .terms-wrapper {
+            max-width: 900px;
+            margin: 60px auto;
+            background-color: #fff;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            animation: fadeInUp 0.7s ease-out;
+        }
+
+        .terms-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0d6efd;
             margin-bottom: 20px;
         }
-        h3 {
-            color: #555;
+
+        .section-title {
+            font-size: 1.25rem;
+            color: #212529;
+            font-weight: 600;
             margin-top: 30px;
         }
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #666;
+
+        .terms-wrapper p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
         }
-        .section-title {
-            margin-bottom: 10px;
-            font-size: 30px !important;
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .contact-box {
+            margin-top: 40px;
+            padding: 25px;
+            background-color: #f1f5ff;
+            border-left: 5px solid #0d6efd;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .highlight {
+            color: #0d6efd;
+            font-weight: 500;
         }
     </style>
+    
+<div class="container">
+    <div class="terms-wrapper">
+        <h1 class="terms-title">Terms & Conditions</h1>
+        <p class="last-updated">Last Updated: 23 June 2025</p>
 
-{{-- Section --}}
-<section class="mb-5">
-    <div class="container relative z-1">
-        <div class="row g-4 gx-5 align-items-center">
-            <div class="px-2 col-lg-12 px-md-5">
-                <div class="mb-3 subtitle wow fadeInUp">{{business_setting('site_name')}}</div>
-                {{-- <h2 class="text-uppercase wow fadeInUp" data-wow-delay=".2s">Terms & Condition</h2> --}}
-                {{-- <p class="wow fadeInUp">{!! business_setting('term_condition') !!}</p> --}}
+        <p>Welcome to <span class="highlight">RnStack Solution</span>. By accessing or using our website and services, you agree to comply with and be bound by the following terms and conditions.</p>
 
-                <p><strong>परिचय (Introduction)</strong></p>
-        <p>आपका स्वागत है <strong>RnStack Solution</strong> पर। इस वेबसाइट का उपयोग करते हुए, आप हमारी निम्नलिखित शर्तों और नीतियों से सहमत होते हैं। कृपया इन शर्तों को ध्यान से पढ़ें, क्योंकि ये आपके अधिकारों और कर्तव्यों को परिभाषित करती हैं।</p>
-        
-        <h2 class="section-title">वेबसाइट का उपयोग (Use of Website)</h2>
-        <p>आप इस वेबसाइट का उपयोग केवल वैध उद्देश्यों के लिए कर सकते हैं।</p>
-        <p>आपको इस वेबसाइट के किसी भी हिस्से को अवैध, अपमानजनक, या अवैध कार्यों के लिए उपयोग करने का अधिकार नहीं है।</p>
-        <p>हम किसी भी जानकारी या सामग्री को अपनी वेबसाइट पर बिना पूर्व सूचना के बदल सकते हैं।</p>
+        <h5 class="section-title">1. Use of Our Services</h5>
+        <p>Our services are intended for professional and lawful use only. You agree not to use our services for any illegal or unauthorized purpose.</p>
 
-        <h2 class="section-title">उत्पाद और सेवाएं (Products and Services)</h2>
-        <p>हम बीज और अन्य संबंधित उत्पाद प्रदान करते हैं।</p>
-        <p>हम यह सुनिश्चित करते हैं कि हमारे उत्पादों की जानकारी सही और अद्यतन हो, लेकिन किसी भी गलती के लिए हम जिम्मेदार नहीं होंगे।</p>
-        <p>हमारे उत्पाद की उपलब्धता समय-समय पर बदल सकती है।</p>
+        <h5 class="section-title">2. Intellectual Property</h5>
+        <p>All content on our website, including text, graphics, logos, and software, is the property of RnStack Solution and is protected by copyright laws. You may not copy, distribute, or reproduce any content without permission.</p>
 
-        <h2 class="section-title">ऑर्डर प्रक्रिया (Order Process)</h2>
-        <p>जब आप हमारे उत्पादों को खरीदते हैं, तो आप हमारी शर्तों से सहमत होते हैं।</p>
-        <p>हम ऑर्डर की प्रक्रिया को पूरी तरह से सुरक्षित और संरक्षित करते हैं।</p>
-        <p>सभी भुगतान और शिपिंग जानकारी को हम अपने ग्राहक डेटा सुरक्षा प्रणाली में संरक्षित रखते हैं।</p>
+        <h5 class="section-title">3. Payments</h5>
+        <p>All project payments are to be made as agreed upon in the proposal or invoice. Late payments may result in project delays or suspension.</p>
 
-        <h2 class="section-title">भुगतान और बिलिंग (Payment and Billing)</h2>
-        <p>हम भुगतान की प्रक्रिया को पूरी तरह से सुरक्षित करते हैं। सभी भुगतान गेटवे हमारी वेबसाइट पर सुरक्षित रूप से काम करते हैं।</p>
-        <p>आप अपनी ऑर्डर जानकारी को सटीक और अद्यतित रखें, ताकि ऑर्डर और शिपिंग में कोई समस्या न हो।</p>
+        <h5 class="section-title">4. Cancellation & Refunds</h5>
+        <p>Once the project work has started or a product is delivered, no refunds will be processed unless agreed in writing. For digital services, refund policies are strictly as per project agreements.</p>
 
-        <h2 class="section-title">वापसी और रिफंड (Returns and Refunds)</h2>
-        <p>अगर आपने गलत उत्पाद प्राप्त किया है, या किसी उत्पाद में दोष है, तो आप उसे वापसी/रिफंड के लिए भेज सकते हैं।</p>
-        <p>कृपया हमारे <a href="/returns-policy">Returns Policy</a> पेज पर जाकर रिफंड और वापसी के विस्तृत निर्देश पढ़ें।</p>
+        <h5 class="section-title">5. Limitation of Liability</h5>
+        <p>We are not liable for any direct, indirect, or incidental damages resulting from the use or inability to use our services. You use our website at your own risk.</p>
 
-        <h2 class="section-title">उत्तरदायित्व की सीमा (Limitation of Liability)</h2>
-        <p>हम किसी भी अप्रत्याशित नुकसान या हानि के लिए जिम्मेदार नहीं होंगे, जो वेबसाइट के उपयोग से उत्पन्न हो सकती है। हम केवल वेबसाइट पर उपलब्ध जानकारी को उपयोगकर्ताओं के लिए उचित और लाभकारी मानते हैं।</p>
+        <h5 class="section-title">6. Changes to Terms</h5>
+        <p>We may revise these terms at any time without prior notice. Continued use of our website or services means you accept the updated terms.</p>
 
-        <h2 class="section-title">नियमों में बदलाव (Changes to These Terms)</h2>
-        <p>हम इन नियमों को समय-समय पर अद्यतन कर सकते हैं। कोई भी बदलाव इस पेज पर प्रदर्शित किया जाएगा। कृपया इस पेज को नियमित रूप से जांचें।</p>
-
-        <h2 class="section-title">संपर्क करें (Contact Us)</h2>
-        <p>अगर आपको इन शर्तों के बारे में कोई सवाल या चिंता है, तो कृपया हमसे संपर्क करें:</p>
-        <p>ईमेल: <a href="mailto:info@RnStack Solution.in">info@RnStack Solution.in</a></p>
-            </div>
-
+        <div class="contact-box">
+            <h5>Contact Us</h5>
+            <p>If you have any questions regarding these Terms & Conditions, please contact us:</p>
+            <ul class="list-unstyled">
+                <li><strong>Email:</strong> support@rnstacksolution.com</li>
+                <li><strong>Phone:</strong> +91 9752902223</li>
+                <li><strong>Website:</strong> https://rnstacksolution.villageterracegarden.com</li>
+            </ul>
         </div>
     </div>
-
-</section>
-{{-- Section --}}
+</div>
 
 
 @endsection
