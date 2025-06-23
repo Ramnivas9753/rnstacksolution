@@ -216,7 +216,7 @@
         <section class="py-5 bg-light" id="our-team">
             <div class="container" data-aos="fade-up"
                         data-aos-duration="1500">
-                <h2 class="mb-3 text-center fw-bold text-primary-color">🚀 Meet
+                <h2 class="mb-3 text-center fw-bold text-primary-color"> Meet
                     Our
                     Creative Minds</h2>
                 <p class="mb-5 text-center text-muted fs-5 fw-semibold" data-aos="fade-up"
