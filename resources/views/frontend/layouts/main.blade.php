@@ -218,7 +218,7 @@
 
                         <!-- Social Icons -->
                         <div class="gap-3 mt-3 d-flex">
-                            <a href="https://wa.me/919753102497" target="_blank"
+                            <a href="https://wa.me/{{business_setting('phone_no2')}}" target="_blank"
                                 class="social-icon">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
@@ -282,7 +282,7 @@
     <div class="mb-4">
         <h6 class="mb-3 text-white fw-bold">QUICK CONTACT</h6>
         <p class="mb-1 text-light small">
-            📞 <a href="tel:+919752902223" class="text-light text-decoration-none">+91 97529 02223</a>
+            📞 <a href="tel:{{business_setting('phone_no2')}}" class="text-light text-decoration-none">+91 {{business_setting('phone_no2')}}</a>
         </p>
         <p class="mb-0 text-light small">
             📧 <a href="mailto:support@rnstacksolution.com" class="text-light text-decoration-none">support@rnstacksolution.com</a>
@@ -315,7 +315,7 @@
         <!-- footer end -->
 
         <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/{{business_setting('phone_no1')}}" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+<a href="https://wa.me/{{business_setting('phone_no2')}}" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
     <img src="{{ asset('assets') }}/images/chat.png" alt="WhatsApp" width="50" height="50">
 </a>
 
