@@ -159,6 +159,11 @@
                             <a class="text-white nav-link fw-semibold"
                                 href={{ route('front.blog') }}>Blogs</a>
                         </li>
+                        <li class="nav-item" data-aos="flip-up"
+                        data-aos-duration="1500">
+                            <a class="text-white nav-link fw-semibold"
+                                href={{ route('front.gallery') }}>Gallery</a>
+                        </li>
                         {{-- <li class="nav-item" data-aos="flip-up"
                         data-aos-duration="1500">
                             <a class="text-white nav-link fw-semibold"
